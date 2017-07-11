@@ -9,7 +9,7 @@ RUN dnf install -y python-devel
 RUN dnf install -y libffi-devel
 RUN dnf install -y redhat-rpm-config
 RUN dnf install -y openssl-devel
-RUN git clone https://github.com/CentOS-PaaS-SIG/linch-pin/
-WORKDIR "/linch-pin"
+RUN git clone https://github.com/CentOS-PaaS-SIG/linchpin/
+WORKDIR "/linchpin"
 RUN echo "$PWD"
 RUN pip install file://$PWD
