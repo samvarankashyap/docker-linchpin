@@ -8,7 +8,9 @@ RUN dnf install -y gcc \
                    libffi-devel \
                    redhat-rpm-config \
                    openssl-devel \
-                   && dnf clean all
+                   libyaml-dev \
+                   libpython2.7-dev \
+                   && dnf clean all 
 RUN git clone https://github.com/CentOS-PaaS-SIG/linchpin/
 WORKDIR "/linchpin"
 RUN pip install file://$PWD
