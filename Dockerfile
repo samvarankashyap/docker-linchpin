@@ -10,7 +10,7 @@ RUN dnf install -y gcc \
                    openssl-devel \
                    libyaml-devel \
                    && dnf clean all
-RUN dnf groupinstall "Development tools"
+RUN dnf groupinstall -y "Development tools"
 RUN git clone https://github.com/CentOS-PaaS-SIG/linchpin/
 WORKDIR "/linchpin"
 RUN pip install file://$PWD
